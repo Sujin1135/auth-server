@@ -14,8 +14,10 @@ func Run() {
 		})
 	})
 
-	userGroup := r.Group("/users")
-	user.RegisterUserRoutes(userGroup)
+	{
+		userGroup := r.Group("/users")
+		user.RegisterUserRoutes(userGroup)
+	}
 
 	err := r.Run()
 
