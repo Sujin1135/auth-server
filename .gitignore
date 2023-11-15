@@ -21,3 +21,6 @@
 go.work
 
 .idea
+
+# gorm sqlite
+gorm.db
