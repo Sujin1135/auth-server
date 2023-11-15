@@ -1,12 +1,15 @@
-package api
+package main
 
 import (
+	"auth-service/internal/database"
 	"auth-service/internal/user"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
-func Run() {
+func main() {
+	database.InitDB()
+
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
